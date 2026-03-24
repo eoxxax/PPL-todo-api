@@ -14,6 +14,7 @@ API sederhana untuk manajemen To-Do List dengan fitur CRUD menggunakan Node.js d
 - DELETE /todos/:id
 
 ### Response Success:
+```json
 {
   "success": true,
   "data": {
@@ -21,38 +22,48 @@ API sederhana untuk manajemen To-Do List dengan fitur CRUD menggunakan Node.js d
     "task": "Ngerjain tugas PPL"
   }
 }
+```
 
 ### Response Error:
+```json
 {
   "success": false,
   "message": "Not found"
 }
+```
 
 ---
 
-## 3. Panduan Instalasi
+## 3. Panduan Instalasi (Docker)
 
-Jalankan:
+### Menjalankan aplikasi:
+```bash
 docker compose up --build
+```
 
-Port:
-- Host: 3000
-- Container: 3000
+### Port:
+- Host: 3000  
+- Container: 3000  
 
 ---
 
-## 4. Alur Git
-Branch:
+## 4. Alur Kerja Git
+
+### Branch:
 - main
 - develop
 - feature
 
-Contoh commit:
+### Conventional Commits:
 - feat: add API
 - fix: bug fix
 
 ---
 
-## 5. Automasi
-- CI: menjalankan unit test
-- CS: security scan dengan npm audit
+## 5. Status Automasi (GitHub Actions)
+
+- CI: menjalankan unit test secara otomatis saat push atau pull request
+- CS: melakukan security scan menggunakan npm audit
+
+### Badge:
+![CI](https://github.com/eoxxax/PPL-todo-api/actions/workflows/ci.yml/badge.svg)
